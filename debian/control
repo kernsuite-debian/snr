@@ -1,0 +1,22 @@
+Source: snr
+Section: science
+Priority: extra
+Maintainer: KERN packaging <packaging@kernsuite.info>
+Build-Depends: cmake,
+ debhelper (>=9),
+ libisautils,
+ nvidia-cuda-toolkit,
+ libisaopencl,
+ libhdf5-dev, 
+ astrodata,
+ opencl-clhpp-headers,
+ opencl-c-headers,
+ psrdada
+Standards-Version: 3.9.8
+Homepage: https://github.com/AA-ALERT/SNR
+
+Package: snr
+Architecture: any
+Multi-Arch: foreign
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Computing signal-to-noise ratio of dedispersed and folded time series.
